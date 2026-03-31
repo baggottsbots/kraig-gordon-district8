@@ -1,0 +1,7 @@
+{"@context":"https://schema.org","@type":"Person","name":"Kraig Gordon","jobTitle":"Candidate for Beaufort County Council District 8","url":"https://paymegpt.com/p/fNSjyM","image":"https://paymegpt.com/objects/quick-uploads/2/545dcb1025e99ff2.png","address":{"@type":"PostalAddress","addressLocality":"Beaufort","addressRegion":"SC","addressCountry":"US"}}
+
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>{document.querySelectorAll('#page-'+id+' .reveal').forEach(el=>el.classList.add('visible'));},120);}
+function toggleMenu(){const btn=document.getElementById('hamburger');const drawer=document.getElementById('menuDrawer');const overlay=document.getElementById('menuOverlay');if(drawer.classList.contains('open')){closeMenu();}else{btn.classList.add('open');drawer.classList.add('open');overlay.classList.add('open');}}
+function closeMenu(){document.getElementById('hamburger').classList.remove('open');document.getElementById('menuDrawer').classList.remove('open');document.getElementById('menuOverlay').classList.remove('open');}
+const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80);});},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
