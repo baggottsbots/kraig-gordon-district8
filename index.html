@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -17,11 +16,10 @@
 
 <meta name="geo.region" content="US-SC"/>
 <meta name="geo.placename" content="Beaufort County, South Carolina"/>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kraig Gordon","jobTitle":"Candidate for Beaufort County Council District 8","url":"https://paymegpt.com/p/fNSjyM","image":"https://paymegpt.com/objects/quick-uploads/2/545dcb1025e99ff2.png","address":{"@type":"PostalAddress","addressLocality":"Beaufort","addressRegion":"SC","addressCountry":"US"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-
 
 
 <!-- SEO Meta Tags -->
@@ -223,6 +221,24 @@
 </head>
 <body>
 
+<!-- ── 30-SECOND POPUP ── -->
+<div class="popup-overlay" id="infoPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+    <div class="popup-eyebrow">★ Stay Informed</div>
+    <div class="popup-title" id="popupTitle">Join Kraig's Campaign List</div>
+    <div class="popup-body">Get updates straight from the campaign — town halls, voting info, and how you can help Kraig win District 8.</div>
+    <div class="popup-form-row">
+      <input class="popup-input" id="popup-first" type="text" placeholder="First Name" autocomplete="given-name"/>
+      <input class="popup-input" id="popup-last" type="text" placeholder="Last Name" autocomplete="family-name"/>
+    </div>
+    <input class="popup-input" id="popup-email" type="email" placeholder="Email Address" autocomplete="email" style="margin-bottom:.6rem;"/>
+    <input class="popup-input" id="popup-phone" type="tel" placeholder="Phone (optional)" autocomplete="tel"/>
+    <button class="popup-submit" onclick="submitPopup()">Keep Me Informed →</button>
+    <button class="popup-skip" onclick="closePopup()">No thanks, I'll check back later</button>
+  </div>
+</div>
+
 <nav data-section="navbar">
   <a class="nav-brand" onclick="showPage('home')"><span class="nav-star">★</span> <span class="nav-full">Vote For&nbsp;<span style="color:var(--gold)">Kraig Gordon</span>&nbsp;· D8</span><span class="nav-short" style="display:none"><span style="color:var(--gold)">Kraig Gordon</span>&nbsp;· D8</span></a>
   <ul class="nav-links">
@@ -260,7 +276,6 @@
 </div>
 
 <!-- HOME -->
-
 <div id="page-home" class="page active">
   <div class="hero" data-section="hero">
     <div class="hero-photo"><img src="https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png" alt="Kraig Gordon — Vote For Kraig Gordon, Beaufort County Council District 8"/></div>
@@ -315,8 +330,7 @@
     </div>
   </section>
 
-  <!-- ✅ CHANGE 2: New Voting Dates & Locations Section -->
-
+  <!-- VOTING DATES & LOCATIONS -->
   <div class="vote-section reveal" data-section="vote-dates">
     <div style="max-width:1060px;margin:0 auto;">
       <div class="section-label" style="color:var(--gold);">Your Vote Matters</div>
@@ -363,6 +377,12 @@
         </div>
         <div class="vote-loc">
           <div>
+            <div class="vote-loc-name">Bluffton Library</div>
+            <div class="vote-loc-addr">120 Palmetto Way, Bluffton, SC 29910</div>
+          </div>
+        </div>
+        <div class="vote-loc">
+          <div>
             <div class="vote-loc-name">USCB — Hilton Head Campus</div>
             <div class="vote-loc-addr">1 Sand Shark Dr, Room 115, Hilton Head Island, SC 29928</div>
           </div>
@@ -387,10 +407,7 @@
     </div>
   </section>
   <footer data-section="footer">
-    <div class="army-badge">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/>
-      <span class="army-badge-text">Duty · Honor · Country</span>
-    </div>
+    <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty · Honor · Country</span></div>
     <div class="footer-brand">★&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;· District 8</div>
     <div style="font-size:1.1rem;">🇺🇸</div>
     <div class="footer-disclaimer">Paid for by Kraig Gordon for Beaufort County Council District 8</div>
@@ -398,12 +415,12 @@
 </div>
 
 <!-- MEET KRAIG -->
-
 <div id="page-meet" class="page">
-  <div class="page-hero" data-section="page-hero" style="background-image: url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png'); background-size: cover; background-position: center;">
-    <div class="page-hero-eyebrow">Get Involved</div>
-    <h1>Stay Connected</h1>
-    <p>Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+  <div class="page-hero" data-section="page-hero" style="background-image:url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png');background-size:cover;background-position:center;position:relative;background-blend-mode:multiply;">
+    <div class="page-hero-eyebrow" style="position:relative;z-index:1;">Get Involved</div>
+    <h1 style="position:relative;z-index:1;">Stay Connected</h1>
+    <p style="position:relative;z-index:1;">Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+    
   </div>
   <section data-section="meet-bio" style="background:var(--bg);">
     <div class="bio-grid reveal">
@@ -442,10 +459,7 @@
     </div>
   </section>
   <footer data-section="footer">
-    <div class="army-badge">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/>
-      <span class="army-badge-text">Duty · Honor · Country</span>
-    </div>
+    <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty · Honor · Country</span></div>
     <div class="footer-brand">★&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;· District 8</div>
     <div style="font-size:1.1rem;">🇺🇸</div>
     <div class="footer-disclaimer">Paid for by Kraig Gordon for Beaufort County Council District 8</div>
@@ -453,15 +467,19 @@
 </div>
 
 <!-- TRANSPORTATION -->
-
 <div id="page-transport" class="page">
-  <div class="page-hero" data-section="page-hero" style="background-image: url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png'); background-size: cover; background-position: center;">
-    <div class="page-hero-eyebrow">Get Involved</div>
-    <h1>Stay Connected</h1>
-    <p>Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+  <div class="page-hero" data-section="page-hero" style="background-image:url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png');background-size:cover;background-position:center;position:relative;background-blend-mode:multiply;">
+    <div class="page-hero-eyebrow" style="position:relative;z-index:1;">Get Involved</div>
+    <h1 style="position:relative;z-index:1;">Stay Connected</h1>
+    <p style="position:relative;z-index:1;">Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+    
   </div>
   <section data-section="transportation" style="background:var(--bg);">
-    <div class="platform-intro reveal"><div class="section-label">Kraig's Transportation Plan</div><h2>Engineering Solutions for Real Problems</h2><p>As Chairman of the Beaufort County Transportation Committee, Kraig Gordon isn't just talking about traffic — he's already working to solve it.</p></div>
+    <div class="platform-intro reveal">
+      <div class="section-label">Kraig's Transportation Plan</div>
+      <h2>Engineering Solutions for Real Problems</h2>
+      <p>As Chairman of the Beaufort County Transportation Committee, Kraig Gordon isn't just talking about traffic — he's already working to solve it.</p>
+    </div>
     <div class="platform-blocks reveal">
       <div class="platform-block"><h3>Value Engineering on Every Project</h3><p>Kraig will mandate "Value Engineering" on every project — ensuring the county gets the highest quality infrastructure at the lowest cost to taxpayers. No more rubber-stamping expensive proposals.</p></div>
       <div class="platform-block"><h3>Proven Expertise on Highway 170</h3><p>Leveraging his experience on the <strong>LATS (Lowcountry Area Transportation Study) Technical Committee</strong>, Kraig will advocate for the next steps of Highway 170, addressing growth while saving taxpayer money.</p></div>
@@ -474,10 +492,7 @@
     <a class="platform-nav-item" onclick="showPage('contact')"><div class="pni-label">Support Kraig</div><div class="pni-title">Get Involved</div></a>
   </div>
   <footer data-section="footer">
-    <div class="army-badge">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/>
-      <span class="army-badge-text">Duty · Honor · Country</span>
-    </div>
+    <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty · Honor · Country</span></div>
     <div class="footer-brand">★&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;· District 8</div>
     <div style="font-size:1.1rem;">🇺🇸</div>
     <div class="footer-disclaimer">Paid for by Kraig Gordon for Beaufort County Council District 8</div>
@@ -485,15 +500,19 @@
 </div>
 
 <!-- GROWTH MANAGEMENT -->
-
 <div id="page-growth" class="page">
-  <div class="page-hero" data-section="page-hero" style="background-image: url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png'); background-size: cover; background-position: center;">
-    <div class="page-hero-eyebrow">Get Involved</div>
-    <h1>Stay Connected</h1>
-    <p>Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+  <div class="page-hero" data-section="page-hero" style="background-image:url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png');background-size:cover;background-position:center;position:relative;background-blend-mode:multiply;">
+    <div class="page-hero-eyebrow" style="position:relative;z-index:1;">Get Involved</div>
+    <h1 style="position:relative;z-index:1;">Stay Connected</h1>
+    <p style="position:relative;z-index:1;">Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+    
   </div>
   <section data-section="growth-management" style="background:var(--bg);">
-    <div class="platform-intro reveal"><div class="section-label">Kraig's Growth Plan</div><h2>Stop Reacting. Start Managing.</h2><p>Beaufort County is growing whether we like it or not. Kraig Gordon's plan ensures that growth strengthens — rather than strains — our community.</p></div>
+    <div class="platform-intro reveal">
+      <div class="section-label">Kraig's Growth Plan</div>
+      <h2>Stop Reacting. Start Managing.</h2>
+      <p>Beaufort County is growing whether we like it or not. Kraig Gordon's plan ensures that growth strengthens — rather than strains — our community.</p>
+    </div>
     <div class="platform-blocks reveal">
       <div class="platform-block"><h3>Curb Cut Management</h3><p>Kraig will implement strict "Curb Cut" policies off County Roads to maintain traffic flow and safety. Too many poorly placed curb cuts are already choking our main roads — this stops.</p></div>
       <div class="platform-block"><h3>Service Road Requirements</h3><p>Kraig will require developers to provide service roads so new developments don't bottleneck our main thoroughfares. <strong>If you build it, you fund the access — not the taxpayer.</strong></p></div>
@@ -506,10 +525,7 @@
     <a class="platform-nav-item" onclick="showPage('contact')"><div class="pni-label">Support Kraig</div><div class="pni-title">Get Involved</div></a>
   </div>
   <footer data-section="footer">
-    <div class="army-badge">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/>
-      <span class="army-badge-text">Duty · Honor · Country</span>
-    </div>
+    <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty · Honor · Country</span></div>
     <div class="footer-brand">★&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;· District 8</div>
     <div style="font-size:1.1rem;">🇺🇸</div>
     <div class="footer-disclaimer">Paid for by Kraig Gordon for Beaufort County Council District 8</div>
@@ -517,15 +533,19 @@
 </div>
 
 <!-- ECONOMIC DEVELOPMENT -->
-
 <div id="page-economic" class="page">
-  <div class="page-hero" data-section="page-hero" style="background-image: url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png'); background-size: cover; background-position: center;">
-    <div class="page-hero-eyebrow">Get Involved</div>
-    <h1>Stay Connected</h1>
-    <p>Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+  <div class="page-hero" data-section="page-hero" style="background-image:url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png');background-size:cover;background-position:center;position:relative;background-blend-mode:multiply;">
+    <div class="page-hero-eyebrow" style="position:relative;z-index:1;">Get Involved</div>
+    <h1 style="position:relative;z-index:1;">Stay Connected</h1>
+    <p style="position:relative;z-index:1;">Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+    
   </div>
   <section data-section="economic-development" style="background:var(--bg);">
-    <div class="platform-intro reveal"><div class="section-label">Kraig's Economic Vision</div><h2>The Right Business for the Lowcountry</h2><p>Economic growth is a double-edged sword. Kraig Gordon believes we must seek a balanced approach that preserves our unique Lowcountry way of life.</p></div>
+    <div class="platform-intro reveal">
+      <div class="section-label">Kraig's Economic Vision</div>
+      <h2>The Right Business for the Lowcountry</h2>
+      <p>Economic growth is a double-edged sword. Kraig Gordon believes we must seek a balanced approach that preserves our unique Lowcountry way of life.</p>
+    </div>
     <div class="platform-blocks reveal">
       <div class="platform-block"><h3>Selective Growth</h3><p>We don't just need <em>any</em> business; we need the <strong>right</strong> businesses that our limited resources can sustain. Every economic development opportunity evaluated through the lens of long-term community benefit.</p></div>
       <div class="platform-block"><h3>Environmental &amp; School Impact</h3><p>Every new business must be evaluated for its impact on our local schools and our fragile environment. The Lowcountry's marshes, waterways, and natural beauty are the foundation of our economy and quality of life.</p></div>
@@ -538,10 +558,7 @@
     <a class="platform-nav-item" onclick="showPage('contact')"><div class="pni-label">Support Kraig</div><div class="pni-title">Get Involved</div></a>
   </div>
   <footer data-section="footer">
-    <div class="army-badge">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/>
-      <span class="army-badge-text">Duty · Honor · Country</span>
-    </div>
+    <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty · Honor · Country</span></div>
     <div class="footer-brand">★&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;· District 8</div>
     <div style="font-size:1.1rem;">🇺🇸</div>
     <div class="footer-disclaimer">Paid for by Kraig Gordon for Beaufort County Council District 8</div>
@@ -549,12 +566,12 @@
 </div>
 
 <!-- CONTACT -->
-
 <div id="page-contact" class="page">
-  <div class="page-hero" data-section="page-hero" style="background-image: url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png'); background-size: cover; background-position: center;">
-    <div class="page-hero-eyebrow">Get Involved</div>
-    <h1>Stay Connected</h1>
-    <p>Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+  <div class="page-hero" data-section="page-hero" style="background-image:url('https://paymegpt.com/objects/quick-uploads/2/216344f4602ef19d.png');background-size:cover;background-position:center;position:relative;background-blend-mode:multiply;">
+    <div class="page-hero-eyebrow" style="position:relative;z-index:1;">Get Involved</div>
+    <h1 style="position:relative;z-index:1;">Stay Connected</h1>
+    <p style="position:relative;z-index:1;">Want to volunteer, request a yard sign, or ask Kraig a question? We'd love to hear from you.</p>
+    
   </div>
   <section data-section="contact" style="background:var(--surface);">
     <div class="contact-wrap reveal">
@@ -566,31 +583,133 @@
         <div style="margin-top:1.6rem;"><img src="https://paymegpt.com/objects/quick-uploads/2/f731fd7f2bb3ed31.jpeg" alt="Kraig Gordon" style="width:100%;max-width:300px;border-radius:6px;filter:saturate(0.88);box-shadow:0 8px 24px rgba(0,0,0,0.4);"/></div>
       </div>
       <div>
-        <div class="form-row">
-          <div class="form-group"><input type="text" placeholder="First Name" autocomplete="given-name"/></div>
-          <div class="form-group"><input type="text" placeholder="Last Name" autocomplete="family-name"/></div>
+        <div id="contact-form-wrap">
+          <div class="form-row">
+            <div class="form-group"><input id="cf-first" type="text" placeholder="First Name" autocomplete="given-name"/></div>
+            <div class="form-group"><input id="cf-last" type="text" placeholder="Last Name" autocomplete="family-name"/></div>
+          </div>
+          <div class="form-group"><input id="cf-email" type="email" placeholder="Email Address" autocomplete="email"/></div>
+          <div class="form-group"><input id="cf-phone" type="tel" placeholder="Phone (optional)" autocomplete="tel"/></div>
+          <div class="form-group">
+            <select id="cf-interest">
+              <option value="" disabled selected>How can you help?</option>
+              <option>Volunteer</option>
+              <option>Yard Sign</option>
+              <option>Donate</option>
+              <option>Spread the Word</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><textarea id="cf-message" placeholder="Message (optional)"></textarea></div>
+          <button class="form-submit" id="cf-submit" onclick="submitContactForm()">Send Message</button>
         </div>
-        <div class="form-group"><input type="email" placeholder="Email Address" autocomplete="email"/></div>
-        <div class="form-group"><input type="tel" placeholder="Phone (optional)" autocomplete="tel"/></div>
-        <div class="form-group"><select><option value="" disabled selected>How can you help?</option><option>Volunteer</option><option>Yard Sign</option><option>Donate</option><option>Spread the Word</option><option>Other</option></select></div>
-        <div class="form-group"><textarea placeholder="Message (optional)"></textarea></div>
-        <button class="form-submit" onclick="alert('Thank you! The campaign team will be in touch soon.')">Send Message</button>
+        <div id="contact-success" style="display:none;padding:2rem;background:rgba(201,168,76,0.1);border:1px solid var(--gold);border-radius:6px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:.8rem;">🎖️</div>
+          <div style="font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:800;color:var(--white);margin-bottom:.6rem;">Thank You!</div>
+          <div style="font-family:'Source Sans 3',sans-serif;font-size:1rem;color:var(--text-dim);">The campaign team will be in touch soon. Duty, Honor, Country.</div>
+        </div>
       </div>
     </div>
   </section>
   <footer data-section="footer">
-    <div class="army-badge">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/>
-      <span class="army-badge-text">Duty · Honor · Country</span>
-    </div>
+    <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty · Honor · Country</span></div>
     <div class="footer-brand">★&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;· District 8</div>
     <div style="font-size:1.1rem;">🇺🇸</div>
     <div class="footer-disclaimer">Paid for by Kraig Gordon for Beaufort County Council District 8</div>
   </footer>
 </div>
 
+<script>
+const WEBHOOK = 'https://paymegpt.com/api/webhooks/flow/rgpqfu0d/19ca97306fb4fb389a3f11a6cc8d5245fbb2da767252e5b210bb5b35180fe42f';
 
+// ── PAGE NAV ──
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(()=>{document.querySelectorAll('#page-'+id+' .reveal').forEach(el=>el.classList.add('visible'));},120);
+}
 
-  <script src="script.js"></script>
+function toggleMenu(){
+  const btn=document.getElementById('hamburger');
+  const drawer=document.getElementById('menuDrawer');
+  const overlay=document.getElementById('menuOverlay');
+  if(drawer.classList.contains('open')){closeMenu();}
+  else{btn.classList.add('open');drawer.classList.add('open');overlay.classList.add('open');}
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('menuDrawer').classList.remove('open');
+  document.getElementById('menuOverlay').classList.remove('open');
+}
+
+// ── SCROLL REVEAL ──
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80);});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── CONTACT FORM ──
+async function submitContactForm(){
+  const first=document.getElementById('cf-first').value.trim();
+  const last=document.getElementById('cf-last').value.trim();
+  const email=document.getElementById('cf-email').value.trim();
+  const phone=document.getElementById('cf-phone').value.trim();
+  const interest=document.getElementById('cf-interest').value;
+  const message=document.getElementById('cf-message').value.trim();
+  if(!first||!email){alert('Please enter your first name and email.');return;}
+  const btn=document.getElementById('cf-submit');
+  btn.disabled=true;btn.textContent='Sending...';
+  const payload={
+    contactName:first+' '+last,
+    contactEmail:email,
+    data:{
+      first_name:first,last_name:last,phone:phone||'Not provided',
+      interest:interest||'Not specified',message:message||'No message',
+      source:'Contact Form'
+    }
+  };
+  try{
+    await fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    document.getElementById('contact-form-wrap').style.display='none';
+    document.getElementById('contact-success').style.display='block';
+  }catch(e){
+    alert('Something went wrong. Please email kraig4bcc8@gmail.com directly.');
+    btn.disabled=false;btn.textContent='Send Message';
+  }
+}
+
+// ── 30-SECOND POPUP ──
+let popupShown=false;
+function showPopup(){
+  if(popupShown)return;
+  popupShown=true;
+  document.getElementById('infoPopup').classList.add('active');
+}
+function closePopup(){
+  document.getElementById('infoPopup').classList.remove('active');
+}
+async function submitPopup(){
+  const first=document.getElementById('popup-first').value.trim();
+  const last=document.getElementById('popup-last').value.trim();
+  const email=document.getElementById('popup-email').value.trim();
+  const phone=document.getElementById('popup-phone').value.trim();
+  if(!first||!email){alert('Please enter your first name and email.');return;}
+  const payload={
+    contactName:first+' '+last,
+    contactEmail:email,
+    data:{
+      first_name:first,last_name:last,phone:phone||'Not provided',
+      source:'30-Second Popup'
+    }
+  };
+  try{
+    await fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  }catch(e){}
+  closePopup();
+  alert('Thanks, '+first+'! We\'ll keep you in the loop. Duty, Honor, Country. 🇺🇸');
+}
+setTimeout(showPopup,30000);
+</script>
 </body>
 </html>
