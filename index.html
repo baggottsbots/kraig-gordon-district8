@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -221,7 +222,6 @@
 </head>
 <body>
 
-<!-- 30-SECOND POPUP -->
 <div class="popup-overlay" id="infoPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
   <div class="popup-box">
     <button class="popup-close" onclick="closePopup()" aria-label="Close">&#10005;</button>
@@ -244,7 +244,7 @@
   <ul class="nav-links">
     <li><a onclick="showPage('home')">Home</a></li>
     <li><a onclick="showPage('meet')">Meet Kraig</a></li>
-    <li><a onclick="showPage('transport')">Platform</a></li>
+    <li><a onclick="showPage('platform')">Platform</a></li>
     <li><a onclick="showPage('contact')">Get Involved</a></li>
   </ul>
   <div class="nav-right">
@@ -259,12 +259,7 @@
     <div class="drawer-label">Navigate</div>
     <a class="drawer-item" onclick="showPage('home');closeMenu()">Home <span class="di-arrow">&rarr;</span></a>
     <a class="drawer-item" onclick="showPage('meet');closeMenu()">Meet Kraig <span class="di-arrow">&rarr;</span></a>
-  </div>
-  <div class="drawer-section">
-    <div class="drawer-label">Platform</div>
-    <a class="drawer-item" onclick="showPage('transport');closeMenu()">Transportation <span class="di-arrow">&rarr;</span></a>
-    <a class="drawer-item" onclick="showPage('growth');closeMenu()">Growth Management <span class="di-arrow">&rarr;</span></a>
-    <a class="drawer-item" onclick="showPage('economic');closeMenu()">Economic Development <span class="di-arrow">&rarr;</span></a>
+    <a class="drawer-item" onclick="showPage('platform');closeMenu()">Platform <span class="di-arrow">&rarr;</span></a>
   </div>
   <div class="drawer-section">
     <div class="drawer-label">Get Involved</div>
@@ -274,7 +269,6 @@
   <button class="drawer-cta" onclick="showPage('contact');closeMenu()">Get Involved</button>
 </div>
 
-<!-- HOME -->
 <div id="page-home" class="page active">
   <div class="hero" data-section="hero">
     <div class="hero-photo"><img src="https://paymegpt.com/objects/quick-uploads/2/399f1ff2b5b95657.jpeg" alt="Kraig Gordon - Vote For Kraig Gordon, Beaufort County Council District 8"/></div>
@@ -308,7 +302,6 @@
     </div>
   </div>
 
-  <!-- ENDORSEMENTS - NOW NEAR THE TOP (after ticker) -->
   <div class="endorsements-section reveal" data-section="endorsements">
     <div class="endorsements-intro">
       <div class="section-label">&#9733; Endorsed By</div>
@@ -344,9 +337,9 @@
   <div class="platform-cards" data-section="platform-cards">
     <div class="platform-cards-heading">&#9733; &nbsp;Kraig's Platform&nbsp; &#9733;</div>
     <div class="platform-grid">
-      <a class="platform-card" onclick="showPage('transport')"><div class="platform-card-num">Platform 01</div><h3>Transportation</h3><p>Engineering-driven solutions for Beaufort County's growing traffic and road challenges.</p><span class="platform-card-cta">Read Platform &rarr;</span></a>
-      <a class="platform-card" onclick="showPage('growth')"><div class="platform-card-num">Platform 02</div><h3>Growth Management</h3><p>Stop reacting to growth. Start managing it with smart policies and updated impact fees.</p><span class="platform-card-cta">Read Platform &rarr;</span></a>
-      <a class="platform-card" onclick="showPage('economic')"><div class="platform-card-num">Platform 03</div><h3>Economic Development</h3><p>Seeking the right fit for the Lowcountry &mdash; quality businesses over quantity.</p><span class="platform-card-cta">Read Platform &rarr;</span></a>
+      <a class="platform-card" onclick="showPage('platform')"><div class="platform-card-num">Platform 01</div><h3>Transportation</h3><p>Engineering-driven solutions for Beaufort County's growing traffic and road challenges.</p><span class="platform-card-cta">Read Platform &rarr;</span></a>
+      <a class="platform-card" onclick="showPage('platform')"><div class="platform-card-num">Platform 02</div><h3>Growth Management</h3><p>Stop reacting to growth. Start managing it with smart policies and updated impact fees.</p><span class="platform-card-cta">Read Platform &rarr;</span></a>
+      <a class="platform-card" onclick="showPage('platform')"><div class="platform-card-num">Platform 03</div><h3>Economic Development</h3><p>Seeking the right fit for the Lowcountry &mdash; quality businesses over quantity.</p><span class="platform-card-cta">Read Platform &rarr;</span></a>
     </div>
   </div>
 
@@ -365,7 +358,6 @@
     </div>
   </section>
 
-  <!-- VOTING DATES & LOCATIONS (rest of the page remains the same) -->
   <div class="vote-section reveal" data-section="vote-dates">
     <div style="max-width:1060px;margin:0 auto;position:relative;z-index:1;">
       <div class="section-label" style="color:var(--gold);">Your Vote Matters</div>
@@ -392,36 +384,11 @@
     <div class="vote-early-block">
       <div class="vote-early-title"><span>Early Voting Centers</span> &mdash; Open 2 Weeks Before Each Election</div>
       <div class="vote-locations-grid">
-        <div class="vote-loc">
-          <div>
-            <div class="vote-loc-name">Beaufort &mdash; Main Elections Office</div>
-            <div class="vote-loc-addr">15 John Galt Rd, Beaufort, SC 29906</div>
-          </div>
-        </div>
-        <div class="vote-loc">
-          <div>
-            <div class="vote-loc-name">Bluffton Recreation Center</div>
-            <div class="vote-loc-addr">61A Ulmer Rd, Bluffton, SC 29910</div>
-          </div>
-        </div>
-        <div class="vote-loc">
-          <div>
-            <div class="vote-loc-name">St. Helena Branch Library</div>
-            <div class="vote-loc-addr">6355 Jonathan Francis Senior Rd, St. Helena Island, SC 29920</div>
-          </div>
-        </div>
-        <div class="vote-loc">
-          <div>
-            <div class="vote-loc-name">Bluffton Library</div>
-            <div class="vote-loc-addr">120 Palmetto Way, Bluffton, SC 29910</div>
-          </div>
-        </div>
-        <div class="vote-loc">
-          <div>
-            <div class="vote-loc-name">USCB &mdash; Hilton Head Campus</div>
-            <div class="vote-loc-addr">1 Sand Shark Dr, Room 115, Hilton Head Island, SC 29928</div>
-          </div>
-        </div>
+        <div class="vote-loc"><div><div class="vote-loc-name">Beaufort &mdash; Main Elections Office</div><div class="vote-loc-addr">15 John Galt Rd, Beaufort, SC 29906</div></div></div>
+        <div class="vote-loc"><div><div class="vote-loc-name">Bluffton Recreation Center</div><div class="vote-loc-addr">61A Ulmer Rd, Bluffton, SC 29910</div></div></div>
+        <div class="vote-loc"><div><div class="vote-loc-name">St. Helena Branch Library</div><div class="vote-loc-addr">6355 Jonathan Francis Senior Rd, St. Helena Island, SC 29920</div></div></div>
+        <div class="vote-loc"><div><div class="vote-loc-name">Bluffton Library</div><div class="vote-loc-addr">120 Palmetto Way, Bluffton, SC 29910</div></div></div>
+        <div class="vote-loc"><div><div class="vote-loc-name">USCB &mdash; Hilton Head Campus</div><div class="vote-loc-addr">1 Sand Shark Dr, Room 115, Hilton Head Island, SC 29928</div></div></div>
       </div>
     </div>
     <p class="vote-note">
@@ -449,11 +416,155 @@
   </footer>
 </div>
 
-<!-- The rest of the pages (meet, transport, growth, economic, contact) remain unchanged -->
-<!-- MEET KRAIG, TRANSPORT, GROWTH, ECONOMIC, CONTACT sections are identical to your original code (omitted here for brevity but fully included in the actual file) -->
+<div id="page-meet" class="page">
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">About the Candidate</div>
+    <h1>Meet Kraig Gordon</h1>
+    <p>Twenty-five years in the United States Army. Thirty-three years in the Lowcountry. Now ready to serve Beaufort County Council District 8.</p>
+  </div>
+  <section class="reveal" style="background:var(--bg);">
+    <div class="bio-grid">
+      <div class="bio-photo"><img src="https://paymegpt.com/objects/quick-uploads/2/f731fd7f2bb3ed31.jpeg" alt="Kraig Gordon"/></div>
+      <div class="bio-text">
+        <div class="section-label">The Story</div>
+        <h2 style="margin-bottom:1.2rem;">Mind of an Engineer. Heart of a Servant.</h2>
+        <p>Kraig Gordon served twenty-five years as an officer in the United States Army, retiring after a career defined by leadership, engineering excellence, and a deep commitment to mission. He brought those same values home to the Lowcountry, where he and his family have lived for over thirty-three years.</p>
+        <p>As Chairman of the Beaufort County Transportation Committee, Kraig has spent years working alongside county staff, engineers, and elected officials on the road, bridge, and infrastructure decisions that affect every resident of District 8. He doesn't need a grace period to learn the budget, the players, or the priorities. He's already at the table.</p>
+        <p>What separates Kraig is the engineering mindset he brings to every problem. Identify the root cause. Measure twice, cut once. Build for the long haul. That discipline is exactly what Beaufort County needs as growth pressures, traffic, and infrastructure demands continue to mount.</p>
+        <div class="bio-quote"><p>"My life has been governed by three words: Duty, Honor, Country. I'm running for District 8 because the Lowcountry deserves leaders who put service first, ask the hard questions, and build solutions that last."</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="reveal" style="background:var(--surface);">
+    <div style="text-align:center;max-width:640px;margin:0 auto 2.5rem;">
+      <div class="section-label" style="justify-content:center;">Credentials</div>
+      <h2>Experience That Matters</h2>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-card">
+        <h3>Military Service</h3>
+        <ul>
+          <li><strong>25 years</strong> US Army officer</li>
+          <li>Retired with honor</li>
+          <li>Engineering and leadership commands</li>
+        </ul>
+      </div>
+      <div class="cred-card">
+        <h3>Local Leadership</h3>
+        <ul>
+          <li><strong>Chairman</strong>, Beaufort County Transportation Committee</li>
+          <li><strong>33-year</strong> Lowcountry resident</li>
+          <li>Active in community and civic affairs</li>
+        </ul>
+      </div>
+      <div class="cred-card">
+        <h3>Professional Background</h3>
+        <ul>
+          <li>Engineering education and discipline</li>
+          <li>Budget and project oversight experience</li>
+          <li>Proven record of public service</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="page-platform" class="page">
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">Where Kraig Stands</div>
+    <h1>Kraig's Platform</h1>
+    <p>Three priorities. Real solutions. Engineering-driven thinking applied to the issues that affect every resident of District 8.</p>
+  </div>
+  <section class="reveal" style="background:var(--bg);">
+    <div class="platform-blocks">
+      <div class="platform-block">
+        <div class="section-label">Priority 01</div>
+        <h3>Transportation</h3>
+        <p>Beaufort County's roads, bridges, and intersections weren't designed for the volume of traffic we see today. As Chairman of the County Transportation Committee, Kraig has spent years working through the data, the budgets, and the engineering trade-offs.</p>
+        <p>His approach is simple: <strong>fix what's broken, plan for what's coming, and stop wasting money on band-aid solutions.</strong> Smart prioritization of capital projects, honest conversations about timelines, and engineering-grade analysis of every dollar spent.</p>
+      </div>
+      <div class="platform-block">
+        <div class="section-label">Priority 02</div>
+        <h3>Growth Management</h3>
+        <p>The Lowcountry is one of the most desirable places to live in America, and that's not going to change. The question is whether the county manages that growth or simply reacts to it.</p>
+        <p>Kraig will push for <strong>updated impact fees that reflect real costs</strong>, smarter zoning that protects what makes the Lowcountry special, and a long-range capital plan that holds developers and the county equally accountable. Growth has to pay its own way.</p>
+      </div>
+      <div class="platform-block">
+        <div class="section-label">Priority 03</div>
+        <h3>Economic Development</h3>
+        <p>Economic development isn't about chasing every business that comes knocking. It's about finding the <strong>right fit</strong> for the Lowcountry: quality employers, sustainable industries, and businesses that strengthen the community without straining infrastructure or quality of life.</p>
+        <p>Kraig will champion targeted, disciplined economic development that brings good jobs, expands the tax base, and respects the character of District 8.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="page-contact" class="page">
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">Get Involved</div>
+    <h1>Contact the Campaign</h1>
+    <p>Volunteer, host a sign, donate, or just say hello. Every conversation matters and every voter counts.</p>
+  </div>
+  <section class="reveal" style="background:var(--bg);">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="section-label">Reach Out</div>
+        <h2 style="margin-bottom:1.2rem;">Let's Win District 8 Together</h2>
+        <p>Whether you want to volunteer, request a yard sign, contribute, or invite Kraig to speak with your community group, the campaign wants to hear from you.</p>
+        <div class="contact-detail">
+          <strong style="color:var(--gold);">Email:</strong> <a href="mailto:kraig4bcc8@gmail.com">kraig4bcc8@gmail.com</a><br/>
+          <strong style="color:var(--gold);">Service Area:</strong> Beaufort County, SC<br/>
+          <strong style="color:var(--gold);">District:</strong> Beaufort County Council District 8
+        </div>
+      </div>
+      <div>
+        <div id="contact-form-wrap">
+          <div class="form-row">
+            <div class="form-group"><input id="cf-first" type="text" placeholder="First Name *" autocomplete="given-name"/></div>
+            <div class="form-group"><input id="cf-last" type="text" placeholder="Last Name" autocomplete="family-name"/></div>
+          </div>
+          <div class="form-group"><input id="cf-email" type="email" placeholder="Email Address *" autocomplete="email"/></div>
+          <div class="form-group"><input id="cf-phone" type="tel" placeholder="Phone Number" autocomplete="tel"/></div>
+          <div class="form-group">
+            <select id="cf-interest">
+              <option value="">How can you help? (Select one)</option>
+              <option value="Volunteer">Volunteer for the campaign</option>
+              <option value="Yard Sign">Request a yard sign</option>
+              <option value="Donate">Donate to the campaign</option>
+              <option value="Host Event">Host a meet-and-greet</option>
+              <option value="Speaking">Invite Kraig to speak</option>
+              <option value="General">General inquiry</option>
+            </select>
+          </div>
+          <div class="form-group"><textarea id="cf-message" placeholder="Your message (optional)"></textarea></div>
+          <button id="cf-submit" class="form-submit" onclick="submitContactForm()">Send Message</button>
+        </div>
+        <div id="contact-success" class="form-success">
+          <h3>&#9733; Message Received</h3>
+          <p>Thank you for reaching out. The campaign will be in touch soon. Duty, Honor, Country.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
 <script>
-const WEBHOOK = 'https://paymegpt.com/api/webhooks/flow/rgpqfu0d/19ca97306fb4fb389a3f11a6cc8d5245fbb2da767252e5b210bb5b35180fe42f';
+// =====================================================================
+// WEBHOOK ENDPOINT
+// Every form submission on this page POSTs to this URL.
+// Backend (PayMeGPT Flow 2933):
+//   1. Appends a row to the Google Sheet (Kraig Gordon D8 - Campaign Leads)
+//   2. Sends an SMS alert to +18435051657
+// =====================================================================
+const WEBHOOK = 'https://paymegpt.com/api/webhooks/flow/2933/08f49a9907e7135e91b26722ee9cee6dbf13d8fe490b25743f7fd6126a7453a8';
+
+async function postToWebhook(payload){
+  return fetch(WEBHOOK,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+  });
+}
 
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -490,9 +601,21 @@ async function submitContactForm(){
   if(!first||!email){alert('Please enter your first name and email.');return;}
   const btn=document.getElementById('cf-submit');
   btn.disabled=true;btn.textContent='Sending...';
-  const payload={contactName:first+' '+last,contactEmail:email,data:{first_name:first,last_name:last,phone:phone||'Not provided',interest:interest||'Not specified',message:message||'No message',source:'Contact Form'}};
+  const payload={
+    contactName:(first+' '+last).trim(),
+    contactEmail:email,
+    contactPhone:phone,
+    data:{
+      first_name:first,
+      last_name:last,
+      phone:phone||'Not provided',
+      interest:interest||'Not specified',
+      message:message||'No message',
+      source:'Contact Form'
+    }
+  };
   try{
-    await fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    await postToWebhook(payload);
     document.getElementById('contact-form-wrap').style.display='none';
     document.getElementById('contact-success').style.display='block';
   }catch(e){
@@ -516,8 +639,20 @@ async function submitPopup(){
   const email=document.getElementById('popup-email').value.trim();
   const phone=document.getElementById('popup-phone').value.trim();
   if(!first||!email){alert('Please enter your first name and email.');return;}
-  const payload={contactName:first+' '+last,contactEmail:email,data:{first_name:first,last_name:last,phone:phone||'Not provided',source:'30-Second Popup'}};
-  try{ await fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); }catch(e){}
+  const payload={
+    contactName:(first+' '+last).trim(),
+    contactEmail:email,
+    contactPhone:phone,
+    data:{
+      first_name:first,
+      last_name:last,
+      phone:phone||'Not provided',
+      interest:'Newsletter Signup',
+      message:'Subscribed via 30-second popup',
+      source:'30-Second Popup'
+    }
+  };
+  try{ await postToWebhook(payload); }catch(e){}
   closePopup();
   alert('Thanks, '+first+'! We\'ll keep you in the loop. Duty, Honor, Country.');
 }
