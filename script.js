@@ -1,7 +1,20 @@
-{"@context":"https://schema.org","@type":"Person","name":"Kraig Gordon","jobTitle":"Candidate for Beaufort County Council District 8","url":"https://paymegpt.com/p/fNSjyM","image":"https://paymegpt.com/objects/quick-uploads/2/545dcb1025e99ff2.png","address":{"@type":"PostalAddress","addressLocality":"Beaufort","addressRegion":"SC","addressCountry":"US"}}
+(function(){try{
+  var slug="vote-kraig-gordon-beaufort-county-district-8";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
 
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>{document.querySelectorAll('#page-'+id+' .reveal').forEach(el=>el.classList.add('visible'));},120);}
-function toggleMenu(){const btn=document.getElementById('hamburger');const drawer=document.getElementById('menuDrawer');const overlay=document.getElementById('menuOverlay');if(drawer.classList.contains('open')){closeMenu();}else{btn.classList.add('open');drawer.classList.add('open');overlay.classList.add('open');}}
-function closeMenu(){document.getElementById('hamburger').classList.remove('open');document.getElementById('menuDrawer').classList.remove('open');document.getElementById('menuOverlay').classList.remove('open');}
-const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80);});},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  // Auto-attach gate token to:
+  //   1. sheet-rows writes (PATCH/POST/PUT/DELETE)
+  //   2. LLM proxy calls (POST/GET) — /api/landing-pages/public/<slug>/llm/...
+  //   3. landing-page LLM config probes (GET) — same prefix
+  // So AI-generated pages don't have to know about the X-Landing-Page-Token header.
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
