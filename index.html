@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -35,11 +34,12 @@
 <meta name="twitter:title" content="Support Kraig Gordon for District 8 Council" />
 <meta name="twitter:description" content="Join Kraig Gordon in protecting the Low Country. Dedicated to Duty, Honor, and Country for Beaufort County Council District 8." />
 <meta name="twitter:image" content="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1775271380485_blob.jpeg" />
-<link rel="icon" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1774961149502_blob.jpeg" />
-<link rel="icon" type="image/png" sizes="32x32" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1774961149502_blob.jpeg" />
-<link rel="icon" type="image/png" sizes="16x16" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1774961149502_blob.jpeg" />
-<link rel="apple-touch-icon" sizes="180x180" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1774961149502_blob.jpeg" />
+<link rel="icon" href="favicon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
 <!-- End SEO Meta Tags -->
+
 
 <script data-field-replace>
 (function(){
@@ -271,7 +271,10 @@
 
 <div id="page-home" class="page active">
   <div class="hero" data-section="hero">
-    <div class="hero-photo"><img src="https://paymegpt.com/objects/quick-uploads/2/399f1ff2b5b95657.jpeg" alt="Kraig Gordon - Vote For Kraig Gordon, Beaufort County Council District 8"/></div>
+    <!-- Hero image: width:100%, height:auto — always fully visible, never cropped -->
+    <div class="hero-photo">
+      <img src="https://paymegpt.com/objects/quick-uploads/2/399f1ff2b5b95657.jpeg" alt="Kraig Gordon - Vote For Kraig Gordon, Beaufort County Council District 8"/>
+    </div>
     <div class="hero-text">
       <div class="hero-eyebrow">Beaufort County Council &middot; District 8</div>
       <h1 class="hero-name"><span class="vote-for">Vote For</span>Kraig Gordon</h1>
@@ -299,6 +302,27 @@
       <div class="ticker-item"><span class="ticker-dot"></span>Duty &middot; Honor &middot; Country</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Vote For Kraig Gordon</div>
       <div class="ticker-item"><span class="ticker-dot"></span>Mind of an Engineer &middot; Heart of a Servant</div>
+    </div>
+  </div>
+
+  <!-- ── VIDEO SECTION ── -->
+  <div class="video-section reveal" data-section="campaign-video">
+    <div class="video-section-inner">
+      <div class="video-intro">
+        <div class="section-label" style="justify-content:center;">&#9654; Hear From Kraig</div>
+        <h2>Kraig's Message to District 8</h2>
+        <p>Hear directly from Kraig Gordon on protecting the Lowcountry way of life, his military service, and why he's running for Beaufort County Council.</p>
+      </div>
+      <div class="video-frame-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/r8dx_LeBU_M?rel=0&modestbranding=1&playsinline=1"
+          title="Kraig Gordon - Message to District 8 | Beaufort County Council"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-caption">&#9733; &nbsp; Vote June 9, 2026 &nbsp; &#9733;</div>
     </div>
   </div>
 
@@ -408,6 +432,7 @@
       <span class="area-tag">Rose Hill</span><span class="area-tag">Belfair</span><span class="area-tag">Crescent</span><span class="area-tag">Colleton River</span><span class="area-tag">Moss Creek</span><span class="area-tag">Hilton Head Plantation</span><span class="area-tag">Bluffton 2A</span><span class="area-tag">Bluffton 3</span><span class="area-tag">Belfair 1 &amp; 2</span><span class="area-tag">Hilton Head 4A&ndash;5B</span>
     </div>
   </section>
+
   <footer data-section="footer">
     <div class="army-badge"><img src="https://paymegpt.com/objects/quick-uploads/2/7b91e453c126bd69.png" alt="United States Army"/><span class="army-badge-text">Duty &middot; Honor &middot; Country</span></div>
     <div class="footer-brand">&#9733;&nbsp;<span>Vote For Kraig Gordon</span>&nbsp;&middot; District 8</div>
@@ -549,21 +574,10 @@
 </div>
 
 <script>
-// =====================================================================
-// WEBHOOK ENDPOINT
-// Every form submission on this page POSTs to this URL.
-// Backend (PayMeGPT Flow 2933):
-//   1. Appends a row to the Google Sheet (Kraig Gordon D8 - Campaign Leads)
-//   2. Sends an SMS alert to +18435051657
-// =====================================================================
 const WEBHOOK = 'https://paymegpt.com/api/webhooks/flow/2933/08f49a9907e7135e91b26722ee9cee6dbf13d8fe490b25743f7fd6126a7453a8';
 
 async function postToWebhook(payload){
-  return fetch(WEBHOOK,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(payload)
-  });
+  return fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
 }
 
 function showPage(id){
@@ -601,19 +615,7 @@ async function submitContactForm(){
   if(!first||!email){alert('Please enter your first name and email.');return;}
   const btn=document.getElementById('cf-submit');
   btn.disabled=true;btn.textContent='Sending...';
-  const payload={
-    contactName:(first+' '+last).trim(),
-    contactEmail:email,
-    contactPhone:phone,
-    data:{
-      first_name:first,
-      last_name:last,
-      phone:phone||'Not provided',
-      interest:interest||'Not specified',
-      message:message||'No message',
-      source:'Contact Form'
-    }
-  };
+  const payload={contactName:(first+' '+last).trim(),contactEmail:email,contactPhone:phone,data:{first_name:first,last_name:last,phone:phone||'Not provided',interest:interest||'Not specified',message:message||'No message',source:'Contact Form'}};
   try{
     await postToWebhook(payload);
     document.getElementById('contact-form-wrap').style.display='none';
@@ -625,39 +627,22 @@ async function submitContactForm(){
 }
 
 let popupShown=false;
-function showPopup(){
-  if(popupShown)return;
-  popupShown=true;
-  document.getElementById('infoPopup').classList.add('active');
-}
-function closePopup(){
-  document.getElementById('infoPopup').classList.remove('active');
-}
+function showPopup(){if(popupShown)return;popupShown=true;document.getElementById('infoPopup').classList.add('active');}
+function closePopup(){document.getElementById('infoPopup').classList.remove('active');}
 async function submitPopup(){
   const first=document.getElementById('popup-first').value.trim();
   const last=document.getElementById('popup-last').value.trim();
   const email=document.getElementById('popup-email').value.trim();
   const phone=document.getElementById('popup-phone').value.trim();
   if(!first||!email){alert('Please enter your first name and email.');return;}
-  const payload={
-    contactName:(first+' '+last).trim(),
-    contactEmail:email,
-    contactPhone:phone,
-    data:{
-      first_name:first,
-      last_name:last,
-      phone:phone||'Not provided',
-      interest:'Newsletter Signup',
-      message:'Subscribed via 30-second popup',
-      source:'30-Second Popup'
-    }
-  };
-  try{ await postToWebhook(payload); }catch(e){}
+  const payload={contactName:(first+' '+last).trim(),contactEmail:email,contactPhone:phone,data:{first_name:first,last_name:last,phone:phone||'Not provided',interest:'Newsletter Signup',message:'Subscribed via 30-second popup',source:'30-Second Popup'}};
+  try{await postToWebhook(payload);}catch(e){}
   closePopup();
   alert('Thanks, '+first+'! We\'ll keep you in the loop. Duty, Honor, Country.');
 }
 setTimeout(showPopup,30000);
 </script>
 
+  <script src="script.js"></script>
 </body>
 </html>
