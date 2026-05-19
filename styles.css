@@ -10,7 +10,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(17,19,24,0.9
 .nav-links a:hover{color:var(--white);}
 @media(max-width:860px){.nav-links{display:none;}}
 .nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.nav-cta{background:var(--red);color:var(--white);font-family:'Source Sans 3',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:3px;white-space:nowrap;transition:background .2s;cursor:pointer;border:none;}
+.nav-cta{background:var(--red);color:var(--white);font-family:'Source Sans 3',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:3px;white-space:nowrap;transition:background .2s;cursor:pointer;border:none;}
 .nav-cta:hover{background:#a82e22;}
 .hamburger{width:42px;height:42px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;background:transparent;border:1px solid var(--border);border-radius:4px;padding:0;flex-shrink:0;transition:border-color .2s;}
 .hamburger:hover{border-color:var(--gold);}
@@ -207,4 +207,29 @@ footer{background:#0C0E13;padding:2.4rem 5% 2rem;text-align:center;border-top:1p
 .popup-skip:hover{color:var(--text);}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ===== HOW TO VOTE SECTION STYLES ===== */
+/* Styled voting information cards matching campaign theme */
+.how-to-vote-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:4rem 7%;position:relative;overflow:hidden;}
+.how-to-vote-section::before{content:'';position:absolute;top:-60px;right:-60px;width:420px;height:420px;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);pointer-events:none;}
+.how-to-vote-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1;}
+.how-to-vote-header{text-align:center;margin-bottom:3rem;}
+.how-to-vote-header .section-label{justify-content:center;margin-bottom:1rem;}
+.how-to-vote-header h2{margin-bottom:1rem;}
+.how-to-vote-header p{color:var(--text-dim);max-width:620px;margin:0 auto;}
+.how-to-vote-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+@media(max-width:768px){.how-to-vote-grid{grid-template-columns:1fr;gap:1.5rem;}}
+.vote-method-card{background:var(--bg);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:2.4rem 2rem;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.vote-method-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(201,168,76,0.1) 0%,transparent 70%);pointer-events:none;}
+.vote-method-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.3);}
+.vote-method-icon{font-size:2.2rem;margin-bottom:1rem;display:inline-block;}
+.vote-method-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:1rem;line-height:1.1;}
+.vote-method-label{font-family:'Source Sans 3',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:block;}
+.vote-method-content{position:relative;z-index:2;}
+.vote-method-content p{font-family:'Source Sans 3',sans-serif;font-size:1.05rem;color:var(--text);line-height:1.8;margin-bottom:.6rem;}
+.vote-method-highlight{font-family:'Source Sans 3',sans-serif;font-size:1.1rem;font-weight:700;color:var(--gold);margin-top:1.2rem;display:block;letter-spacing:.04em;}
+.vote-method-highlight a{color:var(--gold);text-decoration:none;font-weight:700;}
+.vote-method-highlight a:hover{text-decoration:underline;}
+.vote-method-details{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(201,168,76,0.25);font-family:'Source Sans 3',sans-serif;font-size:.95rem;color:var(--text-dim);line-height:1.7;}
+
 @media(max-width:600px){.nav-full{display:none;}.nav-short{display:inline !important;}nav{padding:0 3%;gap:6px;}.nav-brand{font-size:0.7rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44vw;flex-shrink:1;}.nav-cta{font-size:0.65rem;padding:7px 10px;flex-shrink:0;}.nav-right{flex-shrink:0;gap:5px;}.hamburger{flex-shrink:0;width:38px;height:38px;}}
