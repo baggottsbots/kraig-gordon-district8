@@ -158,6 +158,11 @@ footer{background:#0C0E13;padding:2.4rem 5% 2rem;text-align:center;border-top:1p
 .endorser-badge{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-mid));display:flex;align-items:center;justify-content:center;font-size:1.35rem;flex-shrink:0;border:3px solid rgba(201,168,76,0.5);}
 .endorser-name{font-family:'Source Sans 3',sans-serif;font-size:1.25rem;font-weight:700;color:var(--white);line-height:1.2;}
 .endorser-title{font-family:'Source Sans 3',sans-serif;font-size:0.95rem;color:var(--gold);font-weight:600;letter-spacing:.04em;margin-top:.1rem;}
+.endorsement-images-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1040px;margin:0 auto;}
+@media(max-width:780px){.endorsement-images-grid{grid-template-columns:1fr;gap:1.4rem;max-width:440px;}}
+.endorsement-image-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);border-top:4px solid var(--gold);background:var(--surface);box-shadow:0 10px 36px rgba(0,0,0,0.45);transition:transform .25s ease,box-shadow .25s ease;line-height:0;}
+.endorsement-image-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.6);}
+.endorsement-image-card img{width:100%;height:auto;display:block;}
 /* HOW TO VOTE — identical treatment to endorsements-section */
 .how-to-vote-section{background:var(--bg);padding:4.5rem 7% 5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .how-to-vote-inner{max-width:980px;margin:0 auto;}
